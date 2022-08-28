@@ -28,3 +28,17 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: story 1 killed
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_south
+  - action: utter_south_first_south_seen
+  - action: utter_ask_fight_or_back_north
+  - intent: fight
+  - action: action_throw_dice
+  - action: utter_died_a1_2
+  - action: utter_game_over
+  - action: utter_game_end

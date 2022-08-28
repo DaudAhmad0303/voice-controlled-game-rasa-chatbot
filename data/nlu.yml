@@ -1,6 +1,24 @@
 version: "2.0"
 
 nlu:
+- intent: start
+  examples: |
+    - start
+    - Start
+    - begin
+
+- intent: go_south
+  examples: |
+    - south
+    - I want to go to south
+    - go to south
+
+- intent: fight
+  examples: |
+    - fight
+    - I want to fight
+    - I will fight
+
 - intent: greet
   examples: |
     - hey

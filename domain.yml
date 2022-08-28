@@ -1,6 +1,9 @@
 version: "2.0"
 
 intents:
+  - start
+  - go_south
+  - fight
   - greet
   - goodbye
   - affirm
@@ -8,6 +11,9 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+
+actions:
+  - action_throw_dice
 
 responses:
   utter_greet:
@@ -28,6 +34,28 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_exposition:
+  - text: "To the South of you lies a magical forest and ahead to the north of you, a bridged ravine. Beyond that, a mysterious black tower where, rumor has it, an evil necromancer dwells. Your goal is to reach to the top of the tower and destroy the necromancer, freeing the realm from his evil magic. Your chracter has a powerful sword, and a potion that allows him to see through the walls if he drinks it."
+
+  utter_ask_go_north_or_south:
+  - text: "Now, do you want to go the south or north?"
+
+  utter_south_first_south_seen:
+  - text: "Half a dozen of goblins is patrolling here."
+
+  utter_ask_fight_or_back_north:
+  - text: "Do you want to fight or do you want to run back to North?"
+
+  utter_died_a1_2:
+  - text: "You were hit by the goblins' arrows and died."
+
+  utter_game_over:
+  - text: "Game Over!!!"
+
+  utter_game_end:
+  - text: "END"
+
 
 session_config:
   session_expiration_time: 60

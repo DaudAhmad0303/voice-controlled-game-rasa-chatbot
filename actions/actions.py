@@ -11,17 +11,22 @@ from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+from random import randint
 
-
-class ActionHelloWorld(Action):
+class ActionThrowDice(Action):
 
     def name(self) -> Text:
-        return "action_hello_world"
+        return "action_throw_dice"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message(text="Hello World!")
+        number = randint(1,6)
+        if number < 3:
+            dispatcher.utter_message(text=str(number))
+        else:
+            pass
+            
 
         return []
