@@ -11,9 +11,14 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - tunnel_lock_guess
 
 actions:
   - action_throw_dice
+
+slots:
+  dice_throw_1:
+    type: bool
 
 responses:
   utter_greet:
@@ -55,6 +60,18 @@ responses:
 
   utter_game_end:
   - text: "END"
+
+  utter_start:
+  - text: "start"
+
+  utter_killed_first_stage:
+  - text: "You have killed all the goblins and arrived at a secret tunnel that leads to necromancer's black tower. However, there is a lock on the door. From one to six guess the number of a single dice throw."
+  
+  utter_ask_tunnel_lock:
+  - text: "What is your guess?"
+
+  utter_guess_correct:
+  - text: "You are correct and now can have an access to the tunnel"
 
 
 session_config:

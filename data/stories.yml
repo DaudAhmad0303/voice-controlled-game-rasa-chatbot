@@ -39,6 +39,25 @@ stories:
   - action: utter_ask_fight_or_back_north
   - intent: fight
   - action: action_throw_dice
+  - slot_was_set:
+      - dice_throw_1: true
+  - action: utter_killed_first_stage
+  - action: utter_ask_tunnel_lock
+  - intent: tunnel_lock_guess
+  - action: utter_guess_correct
+
+- story: story 2 killed
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_south
+  - action: utter_south_first_south_seen
+  - action: utter_ask_fight_or_back_north
+  - intent: fight
+  - action: action_throw_dice
+  - slot_was_set:
+      - dice_throw_1: null
   - action: utter_died_a1_2
   - action: utter_game_over
-  - action: utter_game_end
+  - action: utter_start

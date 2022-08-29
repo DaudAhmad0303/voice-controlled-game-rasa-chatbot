@@ -19,6 +19,16 @@ nlu:
     - I want to fight
     - I will fight
 
+- intent: tunnel_lock_guess
+  examples: |
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 9
+
 - intent: greet
   examples: |
     - hey
