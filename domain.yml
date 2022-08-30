@@ -11,6 +11,8 @@ intents:
     use_entities: true
 - fight:
     use_entities: true
+- back_to_north:
+    use_entities: true
 - greet:
     use_entities: true
 - goodbye:
@@ -54,6 +56,11 @@ slots:
     initial_value: null
     auto_fill: true
     influence_conversation: true
+  dice_throw_4:
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -76,6 +83,8 @@ responses:
   - text: Half a dozen of goblins is patrolling here.
   utter_ask_fight_or_back_north:
   - text: Do you want to fight or do you want to run back to North?
+  utter_trapped_by_goblins:
+  - text: You run into goblins trap and died.
   utter_died_a1_2:
   - text: You were hit by the goblins' arrows and died.
   utter_game_over:
@@ -100,8 +109,14 @@ responses:
   - text: You killed all the goblins and succesfully made to the top of the tower. As you approach quietly, there is now one last door between you and the necromancer. The door is open but you don't see the necromancer through the opening.
   utter_ask_enter_room_or_drink_potion:
   - text: Do you want to enter the room or drink your potion to see through the wall?
-  utter_killed_third_stage:
+  utter_killed_necromancer_first_stage:
   - text: You found the necromancer and kill him.
+  utter_killed_necromancer_second_stage:
+  - text: You see through the wall the necromancer was hiding himself and you slayed him down.
+  utter_guards_killed_u:
+  - text: The guards were too strong for you and they killed you.
+  utter_hidden_necromancer_killed_u:
+  - text: Necromancer kills you as he hid behind the wall
   utter_congrats:
   - text: Congratulations... You rock!!!
   - text: Congratulations
@@ -110,6 +125,7 @@ actions:
 - action_throw_dice_1
 - action_throw_dice_2
 - action_throw_dice_3
+- action_throw_dice_4
 - action_check_tunnel_lock_guess
 forms: {}
 e2e_actions: []

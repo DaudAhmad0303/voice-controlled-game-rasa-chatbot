@@ -19,6 +19,14 @@ nlu:
     - I want to fight
     - I will fight
 
+- intent: back_to_north
+  examples: |
+    - north
+    - back to north
+    - go back to north
+    - back
+    - go north
+
 - intent: tunnel_lock_guess
   examples: |
     - guess is [0](guess_1)
@@ -34,12 +42,14 @@ nlu:
 - intent: enter_room
   examples: |
     - enter
+    - room
     - enter the room
     - enter room
 
 - intent: drink_potion
   examples: |
     - drink
+    - potion
     - drink the potion
     - drink potion
 
