@@ -29,7 +29,7 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-- story: story 1 succeeded
+- story: story 1 succeeded A1.1.1.1.1.1.1.1
   steps:
   - intent: start
   - action: utter_exposition
@@ -65,7 +65,7 @@ stories:
   - action: utter_killed_necromancer_first_stage
   - action: utter_congrats
 
-- story: story 2 succeeded
+- story: story 2 succeeded A1.1.1.1.1.1.2.1
   steps:
   - intent: start
   - action: utter_exposition
@@ -101,7 +101,7 @@ stories:
   - action: utter_killed_necromancer_second_stage
   - action: utter_congrats
 
-- story: story 1 killed
+- story: story 1 killed A2
   steps:
   - intent: start
   - action: utter_exposition
@@ -114,7 +114,7 @@ stories:
   - action: utter_game_over
   - action: utter_start
 
-- story: story 2 killed
+- story: story 2 killed A1.2
   steps:
   - intent: start
   - action: utter_exposition
@@ -130,7 +130,7 @@ stories:
   - action: utter_game_over
   - action: utter_start
 
-- story: story 3 killed
+- story: story 3 killed A.1.1.2
   steps:
   - intent: start
   - action: utter_exposition
@@ -154,7 +154,7 @@ stories:
   - action: utter_game_over
   - action: utter_start
 
-- story: story 4 killed
+- story: story 4 killed A1.1.1.1.1.2
   steps:
   - intent: start
   - action: utter_exposition
@@ -185,7 +185,7 @@ stories:
   - action: utter_game_over
   - action: utter_start
 
-- story: story 5 killed
+- story: story 5 killed A1.1.1.1.1.1.1.2
   steps:
   - intent: start
   - action: utter_exposition
@@ -222,7 +222,7 @@ stories:
   - action: utter_game_over
   - action: utter_start
 
-- story: story 6 killed
+- story: story 6 killed A1.1.1.1.1.1.2.2
   steps:
   - intent: start
   - action: utter_exposition
