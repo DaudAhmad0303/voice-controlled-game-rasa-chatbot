@@ -21,13 +21,27 @@ nlu:
 
 - intent: tunnel_lock_guess
   examples: |
-    - 1
-    - 2
-    - 3
-    - 4
-    - 5
-    - 6
-    - 9
+    - guess is [0](guess_1)
+    - i think [7](guess_1)
+    - [1](guess_1)
+    - [2](guess_1)
+    - [3](guess_1)
+    - [4](guess_1)
+    - [5](guess_1)
+    - [6](guess_1)
+    - [9](guess_1)
+
+- intent: enter_room
+  examples: |
+    - enter
+    - enter the room
+    - enter room
+
+- intent: drink_potion
+  examples: |
+    - drink
+    - drink the potion
+    - drink potion
 
 - intent: greet
   examples: |

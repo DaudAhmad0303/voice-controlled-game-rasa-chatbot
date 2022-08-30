@@ -29,6 +29,42 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
+- story: story 1 succeeded
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_south
+  - action: utter_south_first_south_seen
+  - action: utter_ask_fight_or_back_north
+  - intent: fight
+  - action: action_throw_dice_1
+  - slot_was_set:
+    - dice_throw_1: true
+  - action: utter_killed_first_stage
+  - action: utter_ask_tunnel_lock
+  - intent: tunnel_lock_guess
+    entities:
+      - guess_1
+  - action: action_check_tunnel_lock_guess
+  - slot_was_set:
+    - correct_guess_for_tunnel: true
+  - action: utter_guess_correct
+  - action: utter_tunnel_inside_seen
+  - action: utter_ask_fight_or_find_other_route
+  - intent: fight
+  - action: action_throw_dice_2
+  - slot_was_set:
+    - dice_throw_2: true
+  - action: utter_killed_second_stage
+  - action: utter_ask_enter_room_or_drink_potion
+  - intent: enter_room
+  - action: action_throw_dice_3
+  - slot_was_set:
+    - dice_throw_3: true
+  - action: utter_killed_third_stage
+  - action: utter_congrats
+
 - story: story 1 killed
   steps:
   - intent: start
@@ -38,14 +74,14 @@ stories:
   - action: utter_south_first_south_seen
   - action: utter_ask_fight_or_back_north
   - intent: fight
-  - action: action_throw_dice
+  - action: action_throw_dice_1
   - slot_was_set:
-      - dice_throw_1: true
-  - action: utter_killed_first_stage
-  - action: utter_ask_tunnel_lock
-  - intent: tunnel_lock_guess
-  - action: utter_guess_correct
+      - dice_throw_1: null
+  - action: utter_died_a1_2
+  - action: utter_game_over
+  - action: utter_start
 
+  
 - story: story 2 killed
   steps:
   - intent: start
@@ -55,9 +91,17 @@ stories:
   - action: utter_south_first_south_seen
   - action: utter_ask_fight_or_back_north
   - intent: fight
-  - action: action_throw_dice
+  - action: action_throw_dice_1
   - slot_was_set:
-      - dice_throw_1: null
-  - action: utter_died_a1_2
+    - dice_throw_1: true
+  - action: utter_killed_first_stage
+  - action: utter_ask_tunnel_lock
+  - intent: tunnel_lock_guess
+    entities:
+      - guess_1
+  - action: action_check_tunnel_lock_guess
+  - slot_was_set:
+    - correct_guess_for_tunnel: false
+  - action: utter_guess_wrong
   - action: utter_game_over
   - action: utter_start
