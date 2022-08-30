@@ -41,3 +41,14 @@ $ sudo apt-get install mpg321
 For Running Endpoint:
 $ rasa run -m models --endpoints endpoints.yml --port 5002 --credentials credentials.yml 
 
+--------------------------------------------------------------------------------------------------------------------------
+                                                My Notes Related to Project
+Overall Info:
+- Total Number of Stories: 40
+- Total Number of Success Stories: 17
+- Total Number of Killed Stories: 23
+
+Covered portion:
+- Total Stories: 8
+- Sucess Stories: 2
+- Killed Stories: 6
