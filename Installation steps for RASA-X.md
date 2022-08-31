@@ -44,9 +44,9 @@ $ rasa run -m models --endpoints endpoints.yml --port 5002 --credentials credent
 --------------------------------------------------------------------------------------------------------------------------
                                                 My Notes Related to Project
 Overall Info:
-- Total Number of Stories: 40
+- Total Number of Stories: 41
 - Total Number of Success Stories: 17
-- Total Number of Killed Stories: 23
+- Total Number of Killed Stories: 24
 
 Covered portion:
 - Total Stories: 8

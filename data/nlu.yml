@@ -18,6 +18,38 @@ nlu:
     - fight
     - I want to fight
     - I will fight
+    - yes fight
+
+- intent: find_another_route
+  examples: |
+    - find other route
+    - find another route
+    - other route
+    - another route
+
+- intent: slay_him
+  examples: |
+    - slay
+    - slay him
+    - slay him right away
+    - slay him down
+
+- intent: wake_him_up
+  examples: |
+    - wake him up
+    - wake
+    - wake up
+    - wake him up before
+    - first wake him up
+
+- intent: play_flute
+  examples: |
+    - play
+    - play flute
+    - play the flute
+    - flute
+    - yes play
+    - yes play flute
 
 - intent: back_to_north
   examples: |

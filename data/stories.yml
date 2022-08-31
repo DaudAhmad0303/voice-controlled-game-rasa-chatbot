@@ -101,6 +101,166 @@ stories:
   - action: utter_killed_necromancer_second_stage
   - action: utter_congrats
 
+- story: story 3 succeeded A1.1.1.1.2.1.1.1.1
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_south
+  - action: utter_south_first_south_seen
+  - action: utter_ask_fight_or_back_north
+  - intent: fight
+  - action: action_throw_dice_1
+  - slot_was_set:
+    - dice_throw_1: true
+  - action: utter_killed_first_stage
+  - action: utter_ask_tunnel_lock
+  - intent: tunnel_lock_guess
+    entities:
+      - guess_1
+  - action: action_check_tunnel_lock_guess
+  - slot_was_set:
+    - correct_guess_for_tunnel: true
+  - action: utter_guess_correct
+  - action: utter_tunnel_inside_seen
+  - action: utter_ask_fight_or_find_other_route
+  - intent: find_another_route
+  - action: utter_another_tunnel_inside_seen1
+  - action: utter_another_tunnel_inside_seen2
+  - action: utter_ask_deal_with_rats
+  - intent: fight
+  - action: action_throw_dice_5
+  - slot_was_set:
+    - dice_throw_5: true
+  - action: utter_killed_third_stage
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: slay_him
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: true
+  - action: utter_killed_necromancer_third_stage
+  - action: utter_congrats
+
+- story: story 4 succeeded A1.1.1.1.2.1.2.1
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_south
+  - action: utter_south_first_south_seen
+  - action: utter_ask_fight_or_back_north
+  - intent: fight
+  - action: action_throw_dice_1
+  - slot_was_set:
+    - dice_throw_1: true
+  - action: utter_killed_first_stage
+  - action: utter_ask_tunnel_lock
+  - intent: tunnel_lock_guess
+    entities:
+      - guess_1
+  - action: action_check_tunnel_lock_guess
+  - slot_was_set:
+    - correct_guess_for_tunnel: true
+  - action: utter_guess_correct
+  - action: utter_tunnel_inside_seen
+  - action: utter_ask_fight_or_find_other_route
+  - intent: find_another_route
+  - action: utter_another_tunnel_inside_seen1
+  - action: utter_another_tunnel_inside_seen2
+  - action: utter_ask_deal_with_rats
+  - intent: fight
+  - action: action_throw_dice_5
+  - slot_was_set:
+    - dice_throw_5: true
+  - action: utter_killed_third_stage
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: wake_him_up
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: true
+  - action: utter_killed_necromancer_third_stage
+  - action: utter_congrats
+
+- story: story 5 succeeded A1.1.1.1.2.2.1.1.1
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_south
+  - action: utter_south_first_south_seen
+  - action: utter_ask_fight_or_back_north
+  - intent: fight
+  - action: action_throw_dice_1
+  - slot_was_set:
+    - dice_throw_1: true
+  - action: utter_killed_first_stage
+  - action: utter_ask_tunnel_lock
+  - intent: tunnel_lock_guess
+    entities:
+      - guess_1
+  - action: action_check_tunnel_lock_guess
+  - slot_was_set:
+    - correct_guess_for_tunnel: true
+  - action: utter_guess_correct
+  - action: utter_tunnel_inside_seen
+  - action: utter_ask_fight_or_find_other_route
+  - intent: find_another_route
+  - action: utter_another_tunnel_inside_seen1
+  - action: utter_another_tunnel_inside_seen2
+  - action: utter_ask_deal_with_rats
+  - intent: play_flute
+  - action: action_throw_dice_7
+  - slot_was_set:
+    - dice_throw_7: true
+  - action: utter_you_convinced_rats
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: slay_him
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: true
+  - action: utter_killed_necromancer_third_stage
+  - action: utter_congrats
+
+- story: story 6 succeeded A1.1.1.1.2.2.1.2.2
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_south
+  - action: utter_south_first_south_seen
+  - action: utter_ask_fight_or_back_north
+  - intent: fight
+  - action: action_throw_dice_1
+  - slot_was_set:
+    - dice_throw_1: true
+  - action: utter_killed_first_stage
+  - action: utter_ask_tunnel_lock
+  - intent: tunnel_lock_guess
+    entities:
+      - guess_1
+  - action: action_check_tunnel_lock_guess
+  - slot_was_set:
+    - correct_guess_for_tunnel: true
+  - action: utter_guess_correct
+  - action: utter_tunnel_inside_seen
+  - action: utter_ask_fight_or_find_other_route
+  - intent: find_another_route
+  - action: utter_another_tunnel_inside_seen1
+  - action: utter_another_tunnel_inside_seen2
+  - action: utter_ask_deal_with_rats
+  - intent: play_flute
+  - action: action_throw_dice_7
+  - slot_was_set:
+    - dice_throw_7: true
+  - action: utter_you_convinced_rats
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: wake_him_up
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: true
+  - action: utter_killed_necromancer_third_stage
+  - action: utter_congrats
+
 - story: story 1 killed A2
   steps:
   - intent: start
@@ -258,3 +418,239 @@ stories:
   - action: utter_hidden_necromancer_killed_u
   - action: utter_game_over
   - action: utter_start
+
+- story: story 7 killed A1.1.1.1.2.1.2
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_south
+  - action: utter_south_first_south_seen
+  - action: utter_ask_fight_or_back_north
+  - intent: fight
+  - action: action_throw_dice_1
+  - slot_was_set:
+    - dice_throw_1: true
+  - action: utter_killed_first_stage
+  - action: utter_ask_tunnel_lock
+  - intent: tunnel_lock_guess
+    entities:
+      - guess_1
+  - action: action_check_tunnel_lock_guess
+  - slot_was_set:
+    - correct_guess_for_tunnel: true
+  - action: utter_guess_correct
+  - action: utter_tunnel_inside_seen
+  - action: utter_ask_fight_or_find_other_route
+  - intent: find_another_route
+  - action: utter_another_tunnel_inside_seen1
+  - action: utter_another_tunnel_inside_seen2
+  - action: utter_ask_deal_with_rats
+  - intent: fight
+  - action: action_throw_dice_5
+  - slot_was_set:
+    - dice_throw_5: null
+  - action: utter_rats_killed_u
+  - action: utter_game_over
+  - action: utter_start
+
+- story: story 8 killed A1.1.1.1.2.1.1.1.2
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_south
+  - action: utter_south_first_south_seen
+  - action: utter_ask_fight_or_back_north
+  - intent: fight
+  - action: action_throw_dice_1
+  - slot_was_set:
+    - dice_throw_1: true
+  - action: utter_killed_first_stage
+  - action: utter_ask_tunnel_lock
+  - intent: tunnel_lock_guess
+    entities:
+      - guess_1
+  - action: action_check_tunnel_lock_guess
+  - slot_was_set:
+    - correct_guess_for_tunnel: true
+  - action: utter_guess_correct
+  - action: utter_tunnel_inside_seen
+  - action: utter_ask_fight_or_find_other_route
+  - intent: find_another_route
+  - action: utter_another_tunnel_inside_seen1
+  - action: utter_another_tunnel_inside_seen2
+  - action: utter_ask_deal_with_rats
+  - intent: fight
+  - action: action_throw_dice_5
+  - slot_was_set:
+    - dice_throw_5: true
+  - action: utter_killed_third_stage
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: slay_him
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: null
+  - action: utter_Necromancer_wake_up_and_killed_u
+  - action: utter_game_over
+  - action: utter_start
+
+- story: story 9 killed A1.1.1.1.2.1.2.2
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_south
+  - action: utter_south_first_south_seen
+  - action: utter_ask_fight_or_back_north
+  - intent: fight
+  - action: action_throw_dice_1
+  - slot_was_set:
+    - dice_throw_1: true
+  - action: utter_killed_first_stage
+  - action: utter_ask_tunnel_lock
+  - intent: tunnel_lock_guess
+    entities:
+      - guess_1
+  - action: action_check_tunnel_lock_guess
+  - slot_was_set:
+    - correct_guess_for_tunnel: true
+  - action: utter_guess_correct
+  - action: utter_tunnel_inside_seen
+  - action: utter_ask_fight_or_find_other_route
+  - intent: find_another_route
+  - action: utter_another_tunnel_inside_seen1
+  - action: utter_another_tunnel_inside_seen2
+  - action: utter_ask_deal_with_rats
+  - intent: fight
+  - action: action_throw_dice_5
+  - slot_was_set:
+    - dice_throw_5: true
+  - action: utter_killed_third_stage
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: wake_him_up
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: null
+  - action: utter_Necromancer_wake_up_and_killed_u
+  - action: utter_game_over
+  - action: utter_start
+
+- story: story 10 killed A1.1.1.1.2.2.2
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_south
+  - action: utter_south_first_south_seen
+  - action: utter_ask_fight_or_back_north
+  - intent: fight
+  - action: action_throw_dice_1
+  - slot_was_set:
+    - dice_throw_1: true
+  - action: utter_killed_first_stage
+  - action: utter_ask_tunnel_lock
+  - intent: tunnel_lock_guess
+    entities:
+      - guess_1
+  - action: action_check_tunnel_lock_guess
+  - slot_was_set:
+    - correct_guess_for_tunnel: true
+  - action: utter_guess_correct
+  - action: utter_tunnel_inside_seen
+  - action: utter_ask_fight_or_find_other_route
+  - intent: find_another_route
+  - action: utter_another_tunnel_inside_seen1
+  - action: utter_another_tunnel_inside_seen2
+  - action: utter_ask_deal_with_rats
+  - intent: play_flute
+  - action: action_throw_dice_7
+  - slot_was_set:
+    - dice_throw_7: null
+  - action: utter_rats_killed_u
+  - action: utter_game_over
+  - action: utter_start
+
+- story: story 11 killed A1.1.1.1.2.2.1.1.2
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_south
+  - action: utter_south_first_south_seen
+  - action: utter_ask_fight_or_back_north
+  - intent: fight
+  - action: action_throw_dice_1
+  - slot_was_set:
+    - dice_throw_1: true
+  - action: utter_killed_first_stage
+  - action: utter_ask_tunnel_lock
+  - intent: tunnel_lock_guess
+    entities:
+      - guess_1
+  - action: action_check_tunnel_lock_guess
+  - slot_was_set:
+    - correct_guess_for_tunnel: true
+  - action: utter_guess_correct
+  - action: utter_tunnel_inside_seen
+  - action: utter_ask_fight_or_find_other_route
+  - intent: find_another_route
+  - action: utter_another_tunnel_inside_seen1
+  - action: utter_another_tunnel_inside_seen2
+  - action: utter_ask_deal_with_rats
+  - intent: play_flute
+  - action: action_throw_dice_7
+  - slot_was_set:
+    - dice_throw_7: true
+  - action: utter_you_convinced_rats
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: slay_him
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: null 
+  - action: utter_Necromancer_wake_up_and_killed_u
+  - action: utter_game_over
+  - action: utter_start
+
+- story: story 12 killed A1.1.1.1.2.2.1.2.2
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_south
+  - action: utter_south_first_south_seen
+  - action: utter_ask_fight_or_back_north
+  - intent: fight
+  - action: action_throw_dice_1
+  - slot_was_set:
+    - dice_throw_1: true
+  - action: utter_killed_first_stage
+  - action: utter_ask_tunnel_lock
+  - intent: tunnel_lock_guess
+    entities:
+      - guess_1
+  - action: action_check_tunnel_lock_guess
+  - slot_was_set:
+    - correct_guess_for_tunnel: true
+  - action: utter_guess_correct
+  - action: utter_tunnel_inside_seen
+  - action: utter_ask_fight_or_find_other_route
+  - intent: find_another_route
+  - action: utter_another_tunnel_inside_seen1
+  - action: utter_another_tunnel_inside_seen2
+  - action: utter_ask_deal_with_rats
+  - intent: play_flute
+  - action: action_throw_dice_7
+  - slot_was_set:
+    - dice_throw_7: true
+  - action: utter_you_convinced_rats
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: wake_him_up
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: null 
+  - action: utter_Necromancer_wake_up_and_killed_u
+  - action: utter_game_over
+  - action: utter_start
+
+

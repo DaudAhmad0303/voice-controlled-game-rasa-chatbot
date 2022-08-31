@@ -83,6 +83,75 @@ class ActionThrowDice4(Action):
         else:
             return []
 
+class ActionThrowDice5(Action):
+    '''Throw a dice and sets the slot``dice_throw_5`` 
+    if number is greater than or equal to `3`, does nothing otherwise.'''
+    
+    def name(self) -> Text:
+        return "action_throw_dice_5"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        number = randint(1,6)
+        if number >= 3:
+            return [SlotSet("dice_throw_5", True)]
+        else:
+            return []
+
+class ActionThrowDice6(Action):
+    '''Throw a dice and sets the slot``dice_throw_6`` 
+    if number is greater than or equal to `3`, does nothing otherwise.'''
+    
+    def name(self) -> Text:
+        return "action_throw_dice_6"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        number = randint(1,6)
+        if number >= 3:
+            return [SlotSet("dice_throw_6", True)]
+        else:
+            return []
+
+class ActionThrowDice7(Action):
+    '''Throw a dice and sets the slot``dice_throw_7`` 
+    if number is greater than or equal to `3`, does nothing otherwise.'''
+    
+    def name(self) -> Text:
+        return "action_throw_dice_7"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        number = randint(1,6)
+        if number >= 3:
+            return [SlotSet("dice_throw_7", True)]
+        else:
+            return []
+
+class ActionThrowDice8(Action):
+    '''Throw a dice and sets the slot``dice_throw_8`` 
+    if number is greater than or equal to `3`, does nothing otherwise.'''
+    
+    def name(self) -> Text:
+        return "action_throw_dice_8"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        number = randint(1,6)
+        if number >= 3:
+            return [SlotSet("dice_throw_8", True)]
+        else:
+            return []
+
+
 class ActioncCheckTunnelGuess1(Action):
     '''Checking the Guess entered by user. If it is in range
     ``range(1,6]``, the guess is correct, uncorrect otherwise.'''
