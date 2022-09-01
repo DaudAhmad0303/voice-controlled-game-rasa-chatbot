@@ -55,14 +55,14 @@ while bot_message != "Bye" or bot_message!='thanks':
         
         audio = r.listen(source)  # listen to the source
         try:
-            message = r.recognize_google(audio, language="ur-PK")  # use recognizer to convert our audio into text part.
+            message = r.recognize_google(audio, language="en")  # use recognizer to convert our audio into text part.
             print("You : \t{}".format(message))
 
         except:
             print("Sorry could not recognize your voice")  # In case of voice not recognized  clearly
     if len(message)==0:
         continue
-    print("Sending message now...")
+    # print("Sending message now...")
 
     r = requests.post('http://localhost:5002/webhooks/rest/webhook', json={"message": message})
 
