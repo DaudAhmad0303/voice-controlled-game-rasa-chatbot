@@ -10,8 +10,66 @@ nlu:
 - intent: go_south
   examples: |
     - south
+    - go south
     - I want to go to south
     - go to south
+
+- intent: go_north
+  examples: |
+    - north
+    - go north
+    - I want to go to north
+    - go to north
+    - go to the north
+
+- intent: go_with_boat
+  examples: |
+    - boat
+    - go with boat
+    - I want to go with boat
+    - I want to use boat
+    - I will use boat
+    - I use boat
+    - I will travel with boat
+    - I will travel through bridge
+
+- intent: go_with_bridge
+  examples: |
+    - bridge
+    - go with bridge
+    - I want to go with bridge
+    - I want to use bridge
+    - I will use bridge
+    - I use bridge
+    - I will travel with bridge
+    - I will travel through bridge
+
+- intent: climb_the_rope
+  examples: |
+    - climb
+    - rope
+    - climb the rope
+    - I will use rope
+    - I want to use rope
+    - I want to climb the rope
+
+- intent: take_the_door
+  examples: |
+    - door
+    - take door
+    - I want to go through the door
+    - I will use door
+
+- intent: row_away
+  examples: |
+    - row away
+    - keep away
+
+- intent: re_start
+  examples: |
+    - restart
+    - restart the game
+    - restart the session
 
 - intent: fight
   examples: |

@@ -9,6 +9,20 @@ intents:
     use_entities: true
 - go_south:
     use_entities: true
+- go_north:
+    use_entities: true
+- go_with_boat:
+    use_entities: true
+- go_with_bridge:
+    use_entities: true
+- climb_the_rope:
+    use_entities: true
+- take_the_door:
+    use_entities: true
+- row_away:
+    use_entities: true
+- re_start:
+    use_entities: true
 - fight:
     use_entities: true
 - back_to_north:
@@ -89,6 +103,17 @@ slots:
     initial_value: null
     auto_fill: true
     influence_conversation: true
+  dice_throw_9:
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  dice_throw_10:
+    type: rasa.shared.core.slots.BooleanSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -109,8 +134,24 @@ responses:
   - text: Now, do you want to go the south or north?
   utter_south_first_south_seen:
   - text: Half a dozen of goblins is patrolling here.
+  utter_south_first_north_seen:
+  - text: You are standing outside the bridged lavin where there is also a boat.
   utter_ask_fight_or_back_north:
   - text: Do you want to fight or do you want to run back to North?
+  utter_ask_go_with_boat_or_bridge:
+  - text: Would you take the boat or the bridge to cross the river?
+  utter_crocodiles_attacked_boat:
+  - text: Your boat is now attacked by crocodiles.
+  utter_ask_fight_or_row_away:
+  - text: Do you want to row away or fight the crocodiles?
+  utter_climbed_successfully:
+  - text: You have climbed the rope and now entered the necromancer's chamber. You find him sleeping in his bed.
+  utter_door_open_lead_to_necromancer:
+  - text: The door is opened that leads to the Necromancer chamber and you find Necromancer sleeping in his bed. What would like to do?
+  utter_row_away_successfully:
+  - text: You row away to safety successfully and have reached the bridge. Now, you are standing outside the Necromancer's tower. There is a door at the entrance of the Necromancer's tower. You see a a rope that leads to top of the tower and a door that leads to towers entrance.
+  utter_crossed_bridge_successfully:
+  - text: You have successfully crossed the bridge and standing outside the Necromancer's tower. There is a rope and You are outside the tower and you see a a rope that leads to top of the tower and a door that leads to towers entrance.
   utter_trapped_by_goblins:
   - text: You run into goblins trap and died.
   utter_died_a1_2:
@@ -139,12 +180,17 @@ responses:
   - text: Which one would you pick?
   utter_ask_slay_or_wake_Necromaner:
   - text: Do you want to slay him right away or wake him up before?
+  - text: Slay him in his sleep or wake him up before that?
   utter_ask_fight_or_find_other_route:
   - text: Do you want to fight or find another route?
   utter_killed_second_stage:
   - text: You killed all the goblins and succesfully made to the top of the tower. As you approach quietly, there is now one last door between you and the necromancer. The door is open but you don't see the necromancer through the opening.
   utter_killed_third_stage:
   - text: You killed all the rats and you are outside the Necromancer's bedroom. You find him sleeping on his bed.
+  utter_killed_fourth_stage:
+  - text: You killed all the crocodiles and have maded to the other end of the river. You are outside the tower and you see a a rope that leads to top of the tower and a door that leads to towers entrance.
+  utter_ask_climb_rope_or_take_door:
+  - text: Would you climb the rope or take the door?
   utter_you_convinced_rats:
   - text: You convinced the rats and escaped from there. Now, you are outside the Necromancer's bedroom. You find him sleeping on his bed.
   utter_ask_enter_room_or_drink_potion:
@@ -163,6 +209,14 @@ responses:
   - text: Necromancer wakes up and kills you.
   utter_rats_killed_u:
   - text: You are killed by the rats.
+  utter_crocodiles_killed_u:
+  - text: You are attacked by crocodiles and you died.
+  utter_fall_from_rope:
+  - text: You died from falling before reaching the top.
+  utter_booby_trape_door:
+  - text: The door is booby traped. You died.
+  utter_tipped_boat:
+  - text: You have tipped your boat. Therefore, you are now dead and a crocodile dinner.
   utter_congrats:
   - text: Congratulations You rock!!!
   - text: Congratulations
@@ -177,6 +231,8 @@ actions:
 - action_throw_dice_6
 - action_throw_dice_7
 - action_throw_dice_8
+- action_throw_dice_9
+- action_throw_dice_10
 - action_check_tunnel_lock_guess
 forms: {}
 e2e_actions: []

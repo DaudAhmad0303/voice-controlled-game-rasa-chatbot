@@ -64,6 +64,7 @@ stories:
     - dice_throw_3: true
   - action: utter_killed_necromancer_first_stage
   - action: utter_congrats
+  - action: action_restart
 
 - story: story 2 succeeded A1.1.1.1.1.1.2.1
   steps:
@@ -100,6 +101,7 @@ stories:
     - dice_throw_4: true
   - action: utter_killed_necromancer_second_stage
   - action: utter_congrats
+  - action: action_restart
 
 - story: story 3 succeeded A1.1.1.1.2.1.1.1.1
   steps:
@@ -140,6 +142,7 @@ stories:
     - dice_throw_6: true
   - action: utter_killed_necromancer_third_stage
   - action: utter_congrats
+  - action: action_restart
 
 - story: story 4 succeeded A1.1.1.1.2.1.2.1
   steps:
@@ -180,6 +183,7 @@ stories:
     - dice_throw_6: true
   - action: utter_killed_necromancer_third_stage
   - action: utter_congrats
+  - action: action_restart
 
 - story: story 5 succeeded A1.1.1.1.2.2.1.1.1
   steps:
@@ -220,6 +224,7 @@ stories:
     - dice_throw_6: true
   - action: utter_killed_necromancer_third_stage
   - action: utter_congrats
+  - action: action_restart
 
 - story: story 6 succeeded A1.1.1.1.2.2.1.2.2
   steps:
@@ -260,6 +265,7 @@ stories:
     - dice_throw_6: true
   - action: utter_killed_necromancer_third_stage
   - action: utter_congrats
+  - action: action_restart
 
 - story: story 1 killed A2
   steps:
@@ -273,6 +279,7 @@ stories:
   - action: utter_trapped_by_goblins
   - action: utter_game_over
   - action: utter_start
+  - action: action_restart
 
 - story: story 2 killed A1.2
   steps:
@@ -289,6 +296,7 @@ stories:
   - action: utter_died_a1_2
   - action: utter_game_over
   - action: utter_start
+  - action: action_restart
 
 - story: story 3 killed A.1.1.2
   steps:
@@ -313,6 +321,7 @@ stories:
   - action: utter_guess_wrong
   - action: utter_game_over
   - action: utter_start
+  - action: action_restart
 
 - story: story 4 killed A1.1.1.1.1.2
   steps:
@@ -344,6 +353,7 @@ stories:
   - action: utter_guards_killed_u
   - action: utter_game_over
   - action: utter_start
+  - action: action_restart
 
 - story: story 5 killed A1.1.1.1.1.1.1.2
   steps:
@@ -381,6 +391,7 @@ stories:
   - action: utter_hidden_necromancer_killed_u
   - action: utter_game_over
   - action: utter_start
+  - action: action_restart
 
 - story: story 6 killed A1.1.1.1.1.1.2.2
   steps:
@@ -418,6 +429,7 @@ stories:
   - action: utter_hidden_necromancer_killed_u
   - action: utter_game_over
   - action: utter_start
+  - action: action_restart
 
 - story: story 7 killed A1.1.1.1.2.1.2
   steps:
@@ -453,6 +465,7 @@ stories:
   - action: utter_rats_killed_u
   - action: utter_game_over
   - action: utter_start
+  - action: action_restart
 
 - story: story 8 killed A1.1.1.1.2.1.1.1.2
   steps:
@@ -494,6 +507,7 @@ stories:
   - action: utter_Necromancer_wake_up_and_killed_u
   - action: utter_game_over
   - action: utter_start
+  - action: action_restart
 
 - story: story 9 killed A1.1.1.1.2.1.2.2
   steps:
@@ -535,6 +549,7 @@ stories:
   - action: utter_Necromancer_wake_up_and_killed_u
   - action: utter_game_over
   - action: utter_start
+  - action: action_restart
 
 - story: story 10 killed A1.1.1.1.2.2.2
   steps:
@@ -570,6 +585,7 @@ stories:
   - action: utter_rats_killed_u
   - action: utter_game_over
   - action: utter_start
+  - action: action_restart
 
 - story: story 11 killed A1.1.1.1.2.2.1.1.2
   steps:
@@ -611,6 +627,7 @@ stories:
   - action: utter_Necromancer_wake_up_and_killed_u
   - action: utter_game_over
   - action: utter_start
+  - action: action_restart
 
 - story: story 12 killed A1.1.1.1.2.2.1.2.2
   steps:
@@ -652,5 +669,898 @@ stories:
   - action: utter_Necromancer_wake_up_and_killed_u
   - action: utter_game_over
   - action: utter_start
+  - action: action_restart
+
+- story: story 1 succeeded B1.1.1.1.1.1.1.1
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_boat
+  - action: utter_crocodiles_attacked_boat
+  - action: utter_ask_fight_or_row_away
+  - intent: fight
+  - action: action_throw_dice_8
+  - slot_was_set:
+    - dice_throw_8: true
+  - action: utter_killed_fourth_stage
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: climb_the_rope
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: true
+  - action: utter_climbed_successfully
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: slay_him
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: true
+  - action: utter_killed_necromancer_third_stage
+  - action: utter_congrats
+  - action: action_restart
+
+- story: story 2 succeeded B1.1.1.1.1.1.2.1
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_boat
+  - action: utter_crocodiles_attacked_boat
+  - action: utter_ask_fight_or_row_away
+  - intent: fight
+  - action: action_throw_dice_8
+  - slot_was_set:
+    - dice_throw_8: true
+  - action: utter_killed_fourth_stage
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: climb_the_rope
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: true
+  - action: utter_climbed_successfully
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: wake_him_up
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: true
+  - action: utter_killed_necromancer_third_stage
+  - action: utter_congrats
+  - action: action_restart
+
+- story: story 3 succeeded B1.1.1.1.2.1.1
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_boat
+  - action: utter_crocodiles_attacked_boat
+  - action: utter_ask_fight_or_row_away
+  - intent: fight
+  - action: action_throw_dice_8
+  - slot_was_set:
+    - dice_throw_8: true
+  - action: utter_killed_fourth_stage
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: take_the_door
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: true
+  - action: utter_door_open_lead_to_necromancer
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: slay_him
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: true
+  - action: utter_killed_necromancer_third_stage
+  - action: utter_congrats
+  - action: action_restart
+
+- story: story 4 succeeded B1.1.1.1.2.2.1
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_boat
+  - action: utter_crocodiles_attacked_boat
+  - action: utter_ask_fight_or_row_away
+  - intent: fight
+  - action: action_throw_dice_8
+  - slot_was_set:
+    - dice_throw_8: true
+  - action: utter_killed_fourth_stage
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: take_the_door
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: true
+  - action: utter_door_open_lead_to_necromancer
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: wake_him_up
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: true
+  - action: utter_killed_necromancer_third_stage
+  - action: utter_congrats
+  - action: action_restart
+
+- story: story 5 succeeded B.1.1.2.1.1.1.1.1.1
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_boat
+  - action: utter_crocodiles_attacked_boat
+  - action: utter_ask_fight_or_row_away
+  - intent: row_away
+  - action: action_throw_dice_10
+  - slot_was_set:
+    - dice_throw_10: true
+  - action: utter_row_away_successfully
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: climb_the_rope
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: true
+  - action: utter_climbed_successfully
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: slay_him
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: true
+  - action: utter_killed_necromancer_third_stage
+  - action: utter_congrats
+  - action: action_restart
+
+- story: story 6 succeeded B.1.1.2.1.1.1.1.2.1
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_boat
+  - action: utter_crocodiles_attacked_boat
+  - action: utter_ask_fight_or_row_away
+  - intent: row_away
+  - action: action_throw_dice_10
+  - slot_was_set:
+    - dice_throw_10: true
+  - action: utter_row_away_successfully
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: climb_the_rope
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: true
+  - action: utter_climbed_successfully
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: wake_him_up
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: true
+  - action: utter_killed_necromancer_third_stage
+  - action: utter_congrats
+  - action: action_restart
+
+- story: story 7 succeeded B.1.1.2.1.1.2.1.1.1
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_boat
+  - action: utter_crocodiles_attacked_boat
+  - action: utter_ask_fight_or_row_away
+  - intent: row_away
+  - action: action_throw_dice_10
+  - slot_was_set:
+    - dice_throw_10: true
+  - action: utter_row_away_successfully
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: take_the_door
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: true
+  - action: utter_door_open_lead_to_necromancer
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: slay_him
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: true
+  - action: utter_killed_necromancer_third_stage
+  - action: utter_congrats
+  - action: action_restart
+
+- story: story 8 succeeded B.1.1.2.1.1.2.1.2.1
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_boat
+  - action: utter_crocodiles_attacked_boat
+  - action: utter_ask_fight_or_row_away
+  - intent: row_away
+  - action: action_throw_dice_10
+  - slot_was_set:
+    - dice_throw_10: true
+  - action: utter_row_away_successfully
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: take_the_door
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: true
+  - action: utter_door_open_lead_to_necromancer
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: wake_him_up
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: true
+  - action: utter_killed_necromancer_third_stage
+  - action: utter_congrats
+  - action: action_restart
+
+- story: story 9 succeeded B2.1.1.1.1
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_bridge
+  - action: utter_crossed_bridge_successfully
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: climb_the_rope
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: true
+  - action: utter_climbed_successfully
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: slay_him
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: true
+  - action: utter_killed_necromancer_third_stage
+  - action: utter_congrats
+  - action: action_restart
+
+- story: story 10 succeeded B2.1.1.2.1
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_bridge
+  - action: utter_crossed_bridge_successfully
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: climb_the_rope
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: true
+  - action: utter_climbed_successfully
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: wake_him_up
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: true
+  - action: utter_killed_necromancer_third_stage
+  - action: utter_congrats
+  - action: action_restart
+
+- story: story 11 succeeded B2.2.1.1.1
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_bridge
+  - action: utter_crossed_bridge_successfully
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: take_the_door
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: true
+  - action: utter_door_open_lead_to_necromancer
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: slay_him
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: true
+  - action: utter_killed_necromancer_third_stage
+  - action: utter_congrats
+  - action: action_restart
+
+- story: story 12 succeeded B2.2.1.2.1
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_bridge
+  - action: utter_crossed_bridge_successfully
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: take_the_door
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: true
+  - action: utter_door_open_lead_to_necromancer
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: wake_him_up
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: true
+  - action: utter_killed_necromancer_third_stage
+  - action: utter_congrats
+  - action: action_restart
+
+- story: story 1 killed B1.1.1.1.1.1.1.2
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_boat
+  - action: utter_crocodiles_attacked_boat
+  - action: utter_ask_fight_or_row_away
+  - intent: fight
+  - action: action_throw_dice_8
+  - slot_was_set:
+    - dice_throw_8: true
+  - action: utter_killed_fourth_stage
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: climb_the_rope
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: true
+  - action: utter_climbed_successfully
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: slay_him
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: null
+  - action: utter_Necromancer_wake_up_and_killed_u
+  - action: utter_game_over
+  - action: utter_start
+  - action: action_restart
+
+- story: story 2 killed B1.1.1.1.1.1.2.2
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_boat
+  - action: utter_crocodiles_attacked_boat
+  - action: utter_ask_fight_or_row_away
+  - intent: fight
+  - action: action_throw_dice_8
+  - slot_was_set:
+    - dice_throw_8: true
+  - action: utter_killed_fourth_stage
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: climb_the_rope
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: true
+  - action: utter_climbed_successfully
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: wake_him_up
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: null
+  - action: utter_Necromancer_wake_up_and_killed_u
+  - action: utter_game_over
+  - action: utter_start
+  - action: action_restart
+
+- story: story 3 killed B1.1.1.1.1.2
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_boat
+  - action: utter_crocodiles_attacked_boat
+  - action: utter_ask_fight_or_row_away
+  - intent: fight
+  - action: action_throw_dice_8
+  - slot_was_set:
+    - dice_throw_8: true
+  - action: utter_killed_fourth_stage
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: climb_the_rope
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: null
+  - action: utter_fall_from_rope
+  - action: utter_game_over
+  - action: utter_start
+  - action: action_restart
+
+- story: story 4 killed B1.1.1.1.2.1.2
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_boat
+  - action: utter_crocodiles_attacked_boat
+  - action: utter_ask_fight_or_row_away
+  - intent: fight
+  - action: action_throw_dice_8
+  - slot_was_set:
+    - dice_throw_8: true
+  - action: utter_killed_fourth_stage
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: take_the_door
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: true
+  - action: utter_door_open_lead_to_necromancer
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: slay_him
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: null
+  - action: utter_Necromancer_wake_up_and_killed_u
+  - action: utter_game_over
+  - action: utter_start
+  - action: action_restart
+
+- story: story 5 killed B1.1.1.1.2.2.2
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_boat
+  - action: utter_crocodiles_attacked_boat
+  - action: utter_ask_fight_or_row_away
+  - intent: fight
+  - action: action_throw_dice_8
+  - slot_was_set:
+    - dice_throw_8: true
+  - action: utter_killed_fourth_stage
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: take_the_door
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: true
+  - action: utter_door_open_lead_to_necromancer
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: wake_him_up
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: null
+  - action: utter_Necromancer_wake_up_and_killed_u
+  - action: utter_game_over
+  - action: utter_start
+  - action: action_restart
+
+- story: story 6 killed B.1.1.2.2.2
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_boat
+  - action: utter_crocodiles_attacked_boat
+  - action: utter_ask_fight_or_row_away
+  - intent: fight
+  - action: action_throw_dice_8
+  - slot_was_set:
+    - dice_throw_8: true
+  - action: utter_killed_fourth_stage
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: take_the_door
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: null
+  - action: utter_booby_trape_door
+  - action: utter_game_over
+  - action: utter_start
+  - action: action_restart
+
+- story: story 7 killed B1.1.1.2
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_boat
+  - action: utter_crocodiles_attacked_boat
+  - action: utter_ask_fight_or_row_away
+  - intent: fight
+  - action: action_throw_dice_8
+  - slot_was_set:
+    - dice_throw_8: null
+  - action: utter_crocodiles_killed_u
+  - action: utter_game_over
+  - action: utter_start
+  - action: action_restart
+
+- story: story 8 killed B1.1.2.1.1.1.1.1.2
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_boat
+  - action: utter_crocodiles_attacked_boat
+  - action: utter_ask_fight_or_row_away
+  - intent: row_away
+  - action: action_throw_dice_10
+  - slot_was_set:
+    - dice_throw_10: true
+  - action: utter_row_away_successfully
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: climb_the_rope
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: true
+  - action: utter_climbed_successfully
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: slay_him
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: null
+  - action: utter_Necromancer_wake_up_and_killed_u
+  - action: utter_game_over
+  - action: utter_start
+  - action: action_restart
+
+- story: story 9 killed B.1.1.2.1.1.1.1.2.2
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_boat
+  - action: utter_crocodiles_attacked_boat
+  - action: utter_ask_fight_or_row_away
+  - intent: row_away
+  - action: action_throw_dice_10
+  - slot_was_set:
+    - dice_throw_10: true
+  - action: utter_row_away_successfully
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: climb_the_rope
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: true
+  - action: utter_climbed_successfully
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: wake_him_up
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: null
+  - action: utter_Necromancer_wake_up_and_killed_u
+  - action: utter_game_over
+  - action: utter_start
+  - action: action_restart
+
+- story: story 10 killed B1.1.1.1.1.2
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_boat
+  - action: utter_crocodiles_attacked_boat
+  - action: utter_ask_fight_or_row_away
+  - intent: row_away
+  - action: action_throw_dice_10
+  - slot_was_set:
+    - dice_throw_10: true
+  - action: utter_row_away_successfully
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: climb_the_rope
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: null
+  - action: utter_fall_from_rope
+  - action: utter_game_over
+  - action: utter_start
+  - action: action_restart
+
+- story: story 11 killed B.1.1.2.2
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_boat
+  - action: utter_crocodiles_attacked_boat
+  - action: utter_ask_fight_or_row_away
+  - intent: row_away
+  - action: action_throw_dice_10
+  - slot_was_set:
+    - dice_throw_10: null
+  - action: utter_tipped_boat
+  - action: utter_game_over
+  - action: utter_start
+  - action: action_restart
+
+- story: story 12 killed B.1.1.2.1.1.2.1.1.2
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_boat
+  - action: utter_crocodiles_attacked_boat
+  - action: utter_ask_fight_or_row_away
+  - intent: row_away
+  - action: action_throw_dice_10
+  - slot_was_set:
+    - dice_throw_10: true
+  - action: utter_row_away_successfully
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: take_the_door
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: true
+  - action: utter_door_open_lead_to_necromancer
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: slay_him
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: null
+  - action: utter_Necromancer_wake_up_and_killed_u
+  - action: utter_game_over
+  - action: utter_start
+  - action: action_restart
+
+- story: story 13 killed B.1.1.2.1.1.2.1.2.2
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_boat
+  - action: utter_crocodiles_attacked_boat
+  - action: utter_ask_fight_or_row_away
+  - intent: row_away
+  - action: action_throw_dice_10
+  - slot_was_set:
+    - dice_throw_10: true
+  - action: utter_row_away_successfully
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: take_the_door
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: true
+  - action: utter_door_open_lead_to_necromancer
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: wake_him_up
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: null
+  - action: utter_Necromancer_wake_up_and_killed_u
+  - action: utter_game_over
+  - action: utter_start
+  - action: action_restart
+
+- story: story 14 killed B.1.1.2.1.1.2.2
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_boat
+  - action: utter_crocodiles_attacked_boat
+  - action: utter_ask_fight_or_row_away
+  - intent: row_away
+  - action: action_throw_dice_10
+  - slot_was_set:
+    - dice_throw_10: true
+  - action: utter_row_away_successfully
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: take_the_door
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: null
+  - action: utter_booby_trape_door
+  - action: utter_game_over
+  - action: utter_start
+  - action: action_restart
+
+- story: story 15 killed B2.1.1.1.2
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_bridge
+  - action: utter_crossed_bridge_successfully
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: climb_the_rope
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: true
+  - action: utter_climbed_successfully
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: slay_him
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: null
+  - action: utter_Necromancer_wake_up_and_killed_u
+  - action: utter_game_over
+  - action: utter_start
+  - action: action_restart
+
+- story: story 16 killed B2.1.1.2.2
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_bridge
+  - action: utter_crossed_bridge_successfully
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: climb_the_rope
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: true
+  - action: utter_climbed_successfully
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: wake_him_up
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: null
+  - action: utter_Necromancer_wake_up_and_killed_u
+  - action: utter_game_over
+  - action: utter_start
+  - action: action_restart
+
+- story: story 17 killed B2.1.2
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_bridge
+  - action: utter_crossed_bridge_successfully
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: climb_the_rope
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: null
+  - action: utter_fall_from_rope
+  - action: utter_game_over
+  - action: utter_start
+  - action: action_restart
+
+- story: story 18 killed B2.2.1.1.2
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_bridge
+  - action: utter_crossed_bridge_successfully
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: take_the_door
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: true
+  - action: utter_door_open_lead_to_necromancer
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: slay_him
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: null
+  - action: utter_Necromancer_wake_up_and_killed_u
+  - action: utter_game_over
+  - action: utter_start
+  - action: action_restart
+
+- story: story 19 killed B2.2.1.2.2
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_bridge
+  - action: utter_crossed_bridge_successfully
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: take_the_door
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: true
+  - action: utter_door_open_lead_to_necromancer
+  - action: utter_ask_slay_or_wake_Necromaner
+  - intent: wake_him_up
+  - action: action_throw_dice_6
+  - slot_was_set:
+    - dice_throw_6: null
+  - action: utter_Necromancer_wake_up_and_killed_u
+  - action: utter_game_over
+  - action: utter_start
+  - action: action_restart
+
+- story: story 20 killed B2.2.2
+  steps:
+  - intent: start
+  - action: utter_exposition
+  - action: utter_ask_go_north_or_south
+  - intent: go_north
+  - action: utter_south_first_north_seen
+  - action: utter_ask_go_with_boat_or_bridge
+  - intent: go_with_bridge
+  - action: utter_crossed_bridge_successfully
+  - action: utter_ask_climb_rope_or_take_door
+  - intent: take_the_door
+  - action: action_throw_dice_9
+  - slot_was_set:
+    - dice_throw_9: null
+  - action: utter_booby_trape_door
+  - action: utter_game_over
+  - action: utter_start
+  - action: action_restart
 
 

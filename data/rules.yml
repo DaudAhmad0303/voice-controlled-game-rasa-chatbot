@@ -11,3 +11,8 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Say 'restart' anytime to reset the session
+  steps:
+  - intent: re_start
+  - action: action_restart

@@ -1,7 +1,7 @@
-## Run this command in terminal  before executing this program
-## rasa run -m models --endpoints endpoints.yml --port 5002 --credentials credentials.yml
+## Run these commands in terminal  before executing this program
+## $ rasa run -m models --endpoints endpoints.yml --port 5002 --credentials credentials.yml
 ## and also run this in seperate terminal
-## rasa run actions
+## $ rasa run actions
 
 import os
 import requests
@@ -9,7 +9,6 @@ import speech_recognition as sr     # import the library
 import subprocess
 from gtts import gTTS
 from pygame import mixer
-# import playsound as ps
 
 # Starting the mixer
 mixer.init()
@@ -28,9 +27,7 @@ def play_saved_song():
     
     mixer.music.load("audio/song2.mp3")
     os.remove("audio/song1.mp3")
-    
 
-# sender = input("What is your name?\n")
 
 bot_message = "Hello World"
 message=""
@@ -46,15 +43,12 @@ myobj = gTTS(text=bot_message, lang='ur', slow=False)
 myobj.save("audio/song1.mp3")
 print('\nFile Saved')
 play_saved_song()
-# Playing the converted file
-# subprocess.call(['mpg321', "welcome.mp3", '--play-and-exit'])
-# ps.playsound('welcome.mp3')
 
 
 while bot_message != "Bye" or bot_message!='thanks':
 
     r = sr.Recognizer()  # initialize recognizer
-    with sr.Microphone() as source:  # mention source it will be either Microphone or audio files.
+    with sr.Microphone() as source:  # source it will be either Microphone or audio files.
         r.adjust_for_ambient_noise(source,duration=1)
         
         print("\t\t\t\t<<<\tListening\t>>>")
@@ -86,30 +80,3 @@ while bot_message != "Bye" or bot_message!='thanks':
     print('\nFile Saved')
     # Playing the converted file
     play_saved_song()
-    # Loading the song
-    # mixer.music.load("welcome.mp3")
-    
-    # Start playing the song
-    # mixer.music.play()
-    
-    # unloads the song
-    
-    
-    # subprocess.call(['mpg321', "welcome.mp3", '--play-and-exit'])     # not working
-    # ps.playsound('welcome.mp3')
-
-
-
-# from pygame import mixer
-  
-# Starting the mixer
-# mixer.init()
-  
-# Loading the song
-# mixer.music.load("song.mp3")
-  
-# Setting the volume
-# mixer.music.set_volume(0.7)
-  
-# Start playing the song
-# mixer.music.play()

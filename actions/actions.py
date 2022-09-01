@@ -151,6 +151,40 @@ class ActionThrowDice8(Action):
         else:
             return []
 
+class ActionThrowDice9(Action):
+    '''Throw a dice and sets the slot``dice_throw_9`` 
+    if number is greater than or equal to `3`, does nothing otherwise.'''
+    
+    def name(self) -> Text:
+        return "action_throw_dice_9"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        number = randint(1,6)
+        if number >= 3:
+            return [SlotSet("dice_throw_9", True)]
+        else:
+            return []
+
+class ActionThrowDice10(Action):
+    '''Throw a dice and sets the slot``dice_throw_10`` 
+    if number is greater than or equal to `3`, does nothing otherwise.'''
+    
+    def name(self) -> Text:
+        return "action_throw_dice_10"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        number = randint(1,6)
+        if number >= 3:
+            return [SlotSet("dice_throw_10", True)]
+        else:
+            return []
+
 
 class ActioncCheckTunnelGuess1(Action):
     '''Checking the Guess entered by user. If it is in range
